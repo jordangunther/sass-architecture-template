@@ -9,9 +9,11 @@
 
 ## Composer update
 
-## NPM install
+## npm install
 
-## Copy .env.example into .env
+Copy .env.example into .env
+
+## php artisan serve
 
 Template ready to be copied from /sass-architecture-template/resources/sass
 
