@@ -1,0 +1,11 @@
+.l-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &--column {
+        flex-direction: column;
+        justify-content: start;
+    }
+
+}
