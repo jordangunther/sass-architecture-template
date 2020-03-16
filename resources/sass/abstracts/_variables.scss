@@ -3,11 +3,11 @@ $color-primary-light: pink;
 $color-primary: red;
 $color-primary-dark: maroon;
 
-$color-secondary-light: skyblue;
-$color-secondary: blue;
-$color-secondary-dark: darkblue;
+$color-accent-light: skyblue;
+$color-accent: blue;
+$color-accent-dark: darkblue;
 
-$color-accent: orange;
+
 
 $color-gray-light-2: #EDEDED;
 $color-gray-light: #DCDDDE;
@@ -19,3 +19,29 @@ $color-white: #FFFFFF;
 
 // FONTS
 $default-font-size: 1.6rem; //16px
+
+//theme definition
+$themes: (
+    default: (
+        'primary': (
+            'base': $color-primary,
+            'light': lighten($color-primary, 10%),
+            'dark': darken($color-primary, 10%)
+        ),
+        'accent': (
+            'base': $color-accent,
+            'light': lighten($color-accent, 10%),
+            'dark': darken($color-accent, 10%)
+        ),
+        'foreground': (
+            'base': $color-black,
+            'light': lighten($color-black, 10%),
+            'dark': darken($color-black, 10%)
+        ),
+        'background': (
+            'base': $color-white,
+            'light': lighten($color-white, 10%),
+            'dark': darken($color-white, 10%)
+        ),
+    ),
+);

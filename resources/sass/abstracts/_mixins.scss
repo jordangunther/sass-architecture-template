@@ -38,3 +38,20 @@ Using em on media queries is best practice https://zellwk.com/blog/media-query-u
     }
 }
 
+//theme implementation
+@mixin themify($themes) {
+    @each $theme, $map in $themes {
+        //create class selector for each theme ex: .theme-dark .applied-element {}
+        .theme-#{$theme} & {
+            $theme-map: () !global;
+            //loop through and create a map for each theme color
+            @each $key, $submap in $map {
+                $value: map-get(map-get($themes, $theme), '#{$key}');
+                $theme-map: map-merge($theme-map, ($key: $value)) !global;
+            }
+            //will use the themed function here
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}

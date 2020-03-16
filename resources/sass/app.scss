@@ -1,6 +1,10 @@
 // Abstracts
 // Independent reusable items that can be used in partials
 // Global mixins, variables, functions, ect..
+// The order matters Variables first, than Functions than Mixins
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
 
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
